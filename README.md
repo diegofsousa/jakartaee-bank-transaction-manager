@@ -1,7 +1,7 @@
 # Jakarta EE Bank Transaction Manager
 
 
-Este é um projeto com fins de prática deliberada que contemplando conceitos e especificações importantes da plataforma Jakarta EE.
+Este é um projeto com fins de prática deliberada que contempla conceitos e especificações importantes da plataforma Jakarta EE.
 
 ## Resumo
 
