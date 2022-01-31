@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --lower_case_table_names=1
+    environment:
+      MYSQL_ROOT_PASSWORD: 'admin'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./docker/provision/mysql/init:/docker-entrypoint-initdb.d
+    networks:
+      - datanodes-network
+
+# Names our volume
+volumes:
+  my-db:
+
+networks:
+  datanodes-network:
+    driver: bridge
